@@ -1,0 +1,119 @@
+.header{
+    height: 55px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: rgb(15, 23, 26);
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: rgb(228, 228, 228);
+    z-index: 100;
+}
+
+.left-section{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.Vhack-logo{
+    height: 32px;
+    padding-right: 10px;
+}
+
+.Vhack-text{
+    font-family: Skranji;
+    font-weight: 500;
+    font-size: 20px;
+}
+
+.right-section{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-shrink: 0;
+    margin-right: 10px;
+}
+
+.login{
+    margin-right: 20px;
+    padding: 8px 24px 8px 24px;
+    background-color: rgb(238, 148, 85);
+    border-radius: 8px;
+    border-style: none;
+    height: 48px;
+    font-size: 14px;
+    font-family: Roboto;
+    font-weight: 500;
+    transition: background-color 0.15s;
+}
+
+.login:hover {
+    cursor: pointer;
+    background-color: white;
+}
+
+#menu-toggle {
+    display: none;
+}
+
+/* The hamburger icon */
+.menu-btn {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    cursor: pointer;
+}
+  
+.menu-btn span {
+    display: block;
+    width: 100%;
+    height: 5px;
+    background-color: white;
+    border-radius: 5px;
+}
+  
+  /* Slide-in Menu (Initially off-screen) */
+.slide-menu {
+    position: fixed;
+    top: 0;
+    right: -250px; /* Initially hidden off-screen */
+    width: 250px;
+    height: 100%;
+    background-color: #333;
+    box-shadow: -4px 0px 6px rgba(0, 0, 0, 0.3);
+    transition: right 0.3s ease-in-out;
+}
+  
+  /* Menu Links */
+.slide-menu ul {
+    list-style: none;
+    padding: 20px;
+    margin: 0;
+}
+  
+.slide-menu ul li {
+    border-bottom: 1px solid #444;
+}
+  
+.slide-menu ul li a {
+    display: block;
+    padding: 15px 20px;
+    color: white;
+    text-decoration: none;
+}
+  
+.slide-menu ul li a:hover {
+    background-color: #555;
+}
+  
+  /* Open the menu when checkbox is checked */
+#menu-toggle:checked + .menu-btn + .slide-menu {
+    right: 0; /* Slide the menu in */
+}
